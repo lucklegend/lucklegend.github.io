@@ -55,10 +55,10 @@ a, a:hover, a:focus {
     align-items: stretch;
     perspective: 1500px;
 }
+
 #myLogo{
     width: 50%;
 }
-
 #sidebar {
     min-width: 250px;
     max-width: 250px;
