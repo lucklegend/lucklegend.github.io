@@ -75,10 +75,6 @@
       <p>I'm <span class="typed" data-typed-items="Web Developer, Programmer, Graphic Artist, Web Designer, Gamer"></span></p>
     </div>
   </section><!-- End Hero -->
-  <?php
-  $yearToday = date('Y');
-  $numYear = $yearToday - 2014;
-  ?>
   <main id="main">
 
     <!-- ======= About Section ======= -->
@@ -88,10 +84,14 @@
         <div class="section-title">
           <h2>About</h2>
           <p><i>"Good things come to those who wait. But better things come to those who work from it."</i> Hi, my name is <b>Janno Nuyles</b>, currently a Web Application Developer. 
-            in almost <?php echo $numYear;?> years of my experience in this industry, I have developed strong problem-skills
+            in almost <span id="numYear"></span> years of my experience in this industry, I have developed strong problem-skills
           </p>
         </div>
-
+        <script>
+          currentYear = new Date().getFullYear();
+          numYear = currentYear - 2015;
+          document.getElementById("numYear").innerHTML = numYear;
+        </script>
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
             <img src="assets/img/profile-img2.jpg" class="img-fluid" alt="">
@@ -631,7 +631,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/aos/aos.js"></>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
