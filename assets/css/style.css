@@ -345,9 +345,14 @@ section {
   line-height: 0;
 }
 
+.about .container .section-title p{
+  text-align: justify;
+  margin-bottom: 10px;
+}
 .about .content p:last-child {
   margin-bottom: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Facts
