@@ -406,40 +406,78 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
+.skills .skill-group {
+  margin-bottom: 30px;
 }
 
-.skills .progress .skill {
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
+.skills .skill-group-title {
+  font-size: 18px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #050d18;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skills .skill-group-title i {
+  color: #149ddd;
+  font-size: 20px;
+}
+
+.skills .skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+.skills .skill-list li {
+  background: #fff;
+  border: 1px solid #dce8f8;
+  border-radius: 8px;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  transition: ease-in-out 0.3s;
+}
+
+.skills .skill-list li:hover {
+  border-color: #149ddd;
+  box-shadow: 0 6px 16px rgba(20, 157, 221, 0.15);
+  transform: translateY(-4px);
+}
+
+.skills .skill-list li i {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.skills .skill-list li span {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
   color: #050d18;
 }
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
+@media (prefers-reduced-motion: reduce) {
+  .skills .skill-list li {
+    transition: none;
+  }
 
-.skills .progress-bar-wrap {
-  background: #dce8f8;
-  height: 10px;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: .9s;
-  background-color: #149ddd;
+  .skills .skill-list li:hover {
+    transform: none;
+  }
 }
 
 /*--------------------------------------------------------------
