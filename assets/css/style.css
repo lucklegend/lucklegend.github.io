@@ -762,7 +762,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Testimonials
+# Certificates
 --------------------------------------------------------------*/
 .testimonials .testimonial-item {
   box-sizing: content-box;
@@ -846,6 +846,54 @@ section {
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #149ddd;
 }
+
+/*--------------------------------------------------------------
+# Clients
+--------------------------------------------------------------*/
+.clients .client-item {
+  width: 100%;
+  padding: 30px 20px;
+  text-align: center;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.clients .client-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 25px rgba(20, 157, 221, 0.2);
+}
+
+.clients .client-item a {
+  display: block;
+}
+
+.clients .client-item a:hover h3 {
+  color: #149ddd;
+}
+
+.clients .client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  margin-bottom: 15px;
+}
+
+.clients .client-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.clients .client-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #173b6c;
+}
+
 
 /*--------------------------------------------------------------
 # Contact
