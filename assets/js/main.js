@@ -237,6 +237,51 @@
   });
 
   /**
+   * Light / dark theme toggle.
+   * The inline script in <head> applies the initial theme before paint;
+   * this wires up the button and follows the OS setting until the visitor picks one.
+   */
+  const themeToggle = select('.theme-toggle')
+  if (themeToggle) {
+    const root = document.documentElement
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)')
+
+    function applyTheme(theme) {
+      root.setAttribute('data-theme', theme)
+      const isDark = theme === 'dark'
+      themeToggle.setAttribute('aria-pressed', String(isDark))
+      themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme')
+      const icon = themeToggle.querySelector('i')
+      icon.classList.toggle('bi-sun', isDark)
+      icon.classList.toggle('bi-moon', !isDark)
+    }
+
+    function storedTheme() {
+      try {
+        return localStorage.getItem('theme')
+      } catch (err) {
+        return null
+      }
+    }
+
+    applyTheme(root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light')
+
+    themeToggle.addEventListener('click', function() {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+      applyTheme(next)
+      try {
+        localStorage.setItem('theme', next)
+      } catch (err) {
+        // Storage blocked (private mode): the choice lasts for this page view only
+      }
+    })
+
+    systemDark.addEventListener('change', function(e) {
+      if (!storedTheme()) applyTheme(e.matches ? 'dark' : 'light')
+    })
+  }
+
+  /**
    * Animation on scroll
    */
   window.addEventListener('load', () => {

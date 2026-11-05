@@ -26,7 +26,19 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css?v=2" rel="stylesheet">
+  <link href="assets/css/style.css?v=4" rel="stylesheet">
+
+  <!-- Apply the saved or OS theme before first paint -->
+  <script>
+    (function() {
+      var theme = null;
+      try { theme = localStorage.getItem('theme'); } catch (err) {}
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 
   <!-- =======================================================
   * Template Name: iPortfolio - v3.3.0
@@ -40,6 +52,9 @@
 
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Theme toggle button ======= -->
+  <button type="button" class="theme-toggle" aria-pressed="false" aria-label="Switch to dark theme"><i class="bi bi-moon"></i></button>
 
   <!-- ======= Header ======= -->
   <header id="header">
@@ -1293,7 +1308,7 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=3"></script>
 
 </body>
 
