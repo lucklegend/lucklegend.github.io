@@ -355,6 +355,33 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 3px solid #149ddd;
 }
 
+#hero .btn-hero-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: -20px;
+  padding: 10px 28px;
+  border: 2px solid #149ddd;
+  border-radius: 50px;
+  background: #149ddd;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#hero .btn-hero-resume i {
+  font-size: 20px;
+}
+
+#hero .btn-hero-resume:hover,
+#hero .btn-hero-resume:focus-visible {
+  background: transparent;
+  color: #fff;
+}
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -1260,5 +1287,153 @@ section {
     position: static;
     width: auto;
     padding-right: 20px 15px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Design Viewer (scrollable, zoomable mockup preview)
+--------------------------------------------------------------*/
+html.dv-open {
+  overflow: hidden;
+}
+
+.design-viewer-dialog {
+  width: min(1200px, 96vw);
+  max-width: none;
+  height: 94vh;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: var(--surface, #fff);
+  color: var(--text, #272829);
+  overflow: hidden;
+}
+
+.design-viewer-dialog::backdrop {
+  background: rgba(5, 13, 24, 0.85);
+}
+
+.design-viewer-dialog .dv-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.design-viewer-dialog .dv-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border, #dce8f8);
+}
+
+.design-viewer-dialog .dv-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+}
+
+.design-viewer-dialog .dv-counter {
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--muted, #999);
+  font-variant-numeric: tabular-nums;
+}
+
+.design-viewer-dialog .dv-divider {
+  width: 1px;
+  height: 24px;
+  margin: 0 4px;
+  background: var(--border, #dce8f8);
+}
+
+.design-viewer-dialog [hidden] {
+  display: none;
+}
+
+.design-viewer-dialog .dv-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: var(--heading, #173b6c);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.design-viewer-dialog .dv-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.design-viewer-dialog .dv-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 38px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.design-viewer-dialog .dv-controls .dv-zoom-reset {
+  min-width: 64px;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.design-viewer-dialog .dv-controls button:hover,
+.design-viewer-dialog .dv-controls button:focus-visible {
+  background: #149ddd;
+  color: #fff;
+}
+
+.design-viewer-dialog .dv-stage {
+  flex: 1;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  background: var(--bg-alt, #f5f8fd);
+  cursor: grab;
+}
+
+.design-viewer-dialog .dv-stage.dv-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.design-viewer-dialog .dv-image {
+  display: block;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.design-viewer-dialog .dv-hint {
+  padding: 6px 12px;
+  border-top: 1px solid var(--border, #dce8f8);
+  font-size: 13px;
+  color: var(--muted, #999);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .design-viewer-dialog {
+    width: 100vw;
+    height: 100dvh;
+    border-radius: 0;
+  }
+
+  .design-viewer-dialog .dv-hint {
+    display: none;
   }
 }
