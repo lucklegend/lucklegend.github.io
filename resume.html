@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Resume · Janno E. Nuyles</title>
+  <meta name="description" content="Resume of Janno E. Nuyles, senior full-stack developer with 12 years in PHP/Laravel, TypeScript/Vue, Python and Go.">
+
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700|Poppins:500,600,700" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/css/resume.css?v=2" rel="stylesheet">
+
+  <!-- Apply the saved or OS theme before first paint (shared with index.html) -->
+  <script>
+    (function() {
+      var theme = null;
+      try { theme = localStorage.getItem('theme'); } catch (err) {}
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <nav class="resume-actions" aria-label="Resume actions">
+    <a href="index.html" class="action-link"><i class="bx bx-arrow-back"></i> Back to portfolio</a>
+    <div class="action-group">
+      <button type="button" class="action-button print-button"><i class="bx bx-printer"></i> Print / Save PDF</button>
+      <button type="button" class="action-button theme-toggle" aria-pressed="false" aria-label="Switch to dark theme"><i class="bx bx-moon"></i></button>
+    </div>
+  </nav>
+
+  <main class="resume">
+
+    <header class="resume-header">
+      <h1>Janno E. Nuyles</h1>
+      <p class="headline">Senior Full-Stack Developer · PHP/Laravel · TypeScript/Vue · Python · 12 Years</p>
+      <p class="contact">
+        Pampanga, Philippines · Open to remote work (any time zone, including US hours) ·
+        <a href="tel:+639268448833">+63 926 844 8833</a> ·
+        <a href="mailto:lucklegend@gmail.com">lucklegend@gmail.com</a>
+      </p>
+      <p class="contact">
+        <a href="https://www.linkedin.com/in/janno-nuyles/">LinkedIn</a> ·
+        <a href="https://lucklegend.github.io/">Portfolio</a> ·
+        <a href="https://github.com/lucklegend">GitHub</a>
+      </p>
+    </header>
+
+    <section class="resume-section">
+      <h2>Summary</h2>
+      <p>
+        Senior full-stack developer with 12 years shipping production web apps. Spent 8 years mostly in PHP (Laravel, Yii, WordPress),
+        building laboratory information systems for 14 DOST regional labs and 10+ private labs, and 100+ client sites for Singapore
+        businesses. Then spent 4.5 years as SDE III at a Hong Kong company, delivering 10+ live systems in TypeScript (Node.js, NestJS, Vue 3),
+        Go, Python and Redis, and moving to each new stack as the company changed direction. Deploys with Docker on AWS EC2,
+        reviews code, and uses AI coding tools daily to get productive in a new codebase fast.
+      </p>
+    </section>
+
+    <section class="resume-section">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Backend:</strong> PHP 7/8 (Laravel, Yii), Node.js (Express, NestJS), Python, Go, REST APIs, GraphQL, OAuth2 (Google sign-in), JWT</li>
+        <li><strong>Frontend:</strong> Vue.js, TypeScript, JavaScript, HTML, CSS</li>
+        <li><strong>Databases:</strong> MySQL, Redis</li>
+        <li><strong>CMS:</strong> WordPress (custom themes and plugins, Divi, Elementor), Joomla</li>
+        <li><strong>DevOps:</strong> Docker, AWS EC2, Linux server admin, Git, CI/CD with GitHub Actions, release automation</li>
+        <li><strong>Quality:</strong> Code review, unit and integration testing with PHPUnit (Laravel), Mocha (TypeScript/Node.js) and pytest (Python)</li>
+        <li><strong>Ways of working:</strong> Agile/Scrum, remote teams across PH, HK and SG, direct client communication</li>
+      </ul>
+    </section>
+
+    <section class="resume-section">
+      <h2>Experience</h2>
+
+      <article class="job">
+        <h3><strong>Software Development Engineer III</strong> · Freedom! Family Ltd. (Hong Kong, remote) · Apr 2022 – Sep 2026</h3>
+        <ul>
+          <li>Built and maintained 10+ production web apps, including h.ki, music.h.ki, heartbeat2.com and the Freedom admin portal, serving.</li>
+          <li>Worked mainly in TypeScript (Node.js, Vue.js) and Python, with Redis for caching, queues, sessions, and MySQL, plus PHP (WordPress, Laravel) for some properties.</li>
+          <li>Moved the backend through three stacks as the company changed direction, from Express.js to NestJS to Go, and migrated the front end from Vue 2 (Options API) to Vue 3 with TypeScript and the Composition API within a year.</li>
+          <li>Containerized apps with Docker and deployed them to AWS EC2, with REST and GraphQL APIs between services.</li>
+          <li>Wrote release automation scripts that removed manual steps from releases for the team's core web properties.</li>
+          <li>Reviewed teammates' pull requests and wrote unit and integration tests, helping cut post-release bugs.</li>
+          <li>Traced customer payment discrepancies and account report errors to root causes in code and data.</li>
+          <li>Used AI coding tools for prototyping, refactoring and testing, which cut ramp-up time on each new stack.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3><strong>Web Programmer</strong> · Axon Consulting (Angeles City) · Jul 2021 – Dec 2021</h3>
+        <ul>
+          <li>Built a wine auction and bidding system in Laravel/Yii used by 500+ registered bidders.</li>
+          <li>Built a condo booking system and a classified-ads site for Singapore clients.</li>
+          <li>Delivered WordPress information sites (Divi, Elementor) for Singapore clients and migrated the company's domain and hosting to a new provider.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3><strong>MIS Personnel (Developer)</strong> · HydroMech Engineering Services (Pampanga) · Apr 2020 – Present (full-time to Apr 2021, then freelance)</h3>
+        <ul>
+          <li>Built a Laboratory Information Management System (Yii, MySQL) from scratch for testing and calibration work, generating service reports, worksheets and accomplishment reports.</li>
+          <li>Managed government certification and permit filings for 50+ clients with zero missed deadlines.</li>
+          <li>Still maintaining and enhancing the LIMS today, adding features as the lab's testing and calibration services grow.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3><strong>Science Research Specialist I (Developer)</strong> · DOST Region 3 (Pampanga) · Nov 2015 – Apr 2020</h3>
+        <ul>
+          <li>Maintained and upgraded the Unified Laboratory Information Management System (ULIMS, Yii) used by 14 DOST regional labs and 10+ private labs nationwide.</li>
+          <li>Built and expanded the DOST Events e-Registration System in Laravel over 3 years.</li>
+          <li>Contributed to SCIMS, a stock and inventory system rolled out to 5 provincial offices.</li>
+          <li>Administered web servers and network infrastructure for 20+ IT assets, keeping sites secure and online.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3><strong>Web Developer</strong> · Storepair Pte Ltd (Singapore, remote) · Aug 2014 – Nov 2015</h3>
+        <ul>
+          <li>Built websites for 100+ clients in Laravel and WordPress, including a Laravel voucher and affiliate system.</li>
+          <li>Cleaned malware from compromised servers and restored client sites, and handled domain and hosting transfers.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="resume-section">
+      <h2>Education</h2>
+      <p><strong>BS Information Technology</strong> · City College of San Fernando, Pampanga · 2013</p>
+      <p>
+        <strong>Trainings:</strong> Python (2019), UI/UX Experience (2018), Android Mobile (2018), Yii 2 and Node.js development (2017),
+        MEAN stack (2016), Software Quality Assurance (2018), Linux Systems Administration (2018)
+      </p>
+    </section>
+
+  </main>
+
+  <script src="assets/js/resume.js?v=1"></script>
+</body>
+
+</html>
