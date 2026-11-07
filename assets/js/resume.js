@@ -1,16 +1,10 @@
 /**
- * Resume page: print button and light/dark theme toggle.
+ * Resume page: light/dark theme toggle.
  * The theme is stored under the same localStorage key as index.html,
  * so the choice carries between the two pages.
  */
 (function() {
   "use strict";
-
-  function bindPrint(button, win) {
-    button.addEventListener("click", function() {
-      win.print();
-    });
-  }
 
   function bindThemeToggle(button, root, storage) {
     const icon = button.querySelector("i");
@@ -45,8 +39,6 @@
     }
   }
 
-  const printButton = document.querySelector(".print-button");
   const themeButton = document.querySelector(".theme-toggle");
-  if (printButton) bindPrint(printButton, window);
   if (themeButton) bindThemeToggle(themeButton, document.documentElement, getStorage(window));
 })();
